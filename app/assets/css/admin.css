@@ -1,0 +1,32 @@
+.connnect-conta-azul-wrap {
+    width: 100%;
+    max-width: 175px;
+    margin-top: 35px;
+    padding: 25px 15px;
+    border: solid 2px;
+    border-color: #2687e9;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.connnect-conta-azul-wrap h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.connnect-conta-azul-wrap .connect-btn {
+    text-transform: uppercase;
+    background: #4aba58;
+    border-color: #4aba58;
+    opacity: .8;
+    transition: all .2s ease;
+}
+
+.connnect-conta-azul-wrap .connect-btn:hover {
+    background: #4aba58;
+    border-color: #4aba58;
+    opacity: 1;
+    transition: all .2s ease;
+}
