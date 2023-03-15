@@ -40,7 +40,19 @@ function getCustomerFromWoocommerceOrder(WC_Order $order): Customer
   $customer->set('email', $order->get_billing_email());
   $customer->set('business_phone', preg_replace('/\D/', '', $order->get_billing_phone()));
   $customer->set('mobile_phone', preg_replace('/\D/', '', $order->get_meta('_billing_cellphone')));
-  $customer->set('document', preg_replace('/\D/', '', $order->get_meta('_billing_cpf')));
+  
+  $cpf  = preg_replace('/\D/', '', $order->get_meta('_billing_cpf'));
+  $cnpj = preg_replace('/\D/', '', $order->get_meta('_billing_cnpj'));
+  
+  $if ($cpf) :
+    $customer->set('document', );
+    $customer->set('person_type', 'NATURAL');
+  
+  elseif ($cnpj) :
+    $customer->set('document', );
+    $customer->set('person_type', 'LEGAL');
+  
+  endif; 
 
   $customer->setAddress(
     $order->get_billing_postcode(),
