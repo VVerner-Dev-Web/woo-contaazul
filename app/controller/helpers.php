@@ -44,7 +44,7 @@ function getCustomerFromWoocommerceOrder(WC_Order $order): Customer
   $cpf  = preg_replace('/\D/', '', $order->get_meta('_billing_cpf'));
   $cnpj = preg_replace('/\D/', '', $order->get_meta('_billing_cnpj'));
   
-  $if ($cpf) :
+  if ($cpf) :
     $customer->set('document', );
     $customer->set('person_type', 'NATURAL');
   
